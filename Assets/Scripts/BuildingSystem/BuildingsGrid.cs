@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildingsGrid : MonoBehaviour
@@ -45,7 +42,7 @@ public class BuildingsGrid : MonoBehaviour
                 bool available = true;
 
                 if (x < 0 || x > GridSize.x - _flyingBuilding.Size.x) available = false;
-                if (y < 0 || x > GridSize.y - _flyingBuilding.Size.y) available = false;
+                if (y < 0 || y > GridSize.y - _flyingBuilding.Size.y) available = false;
 
                 if (available && IsPlaceTaken(x, y))
                 {
